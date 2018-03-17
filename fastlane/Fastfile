@@ -19,5 +19,10 @@ platform :ios do
 
   lane :jenkinstest do
     gym(scheme: "JenkinsTest-Two")
+    upload_to_testflight(
+      username: "apple@moldedbits.com",
+      app_identifier: "com.aks.JenkinsTestTwo",
+      team_id: "80613800",
+      skip_waiting_for_build_processing: true)
   end
 end
